@@ -1,0 +1,27 @@
+{
+    "manifest_version": 2,
+
+    "name": "EDMP Clickable Flairs",
+    "description": "Makes r/edmproduction soundcloud flair links clickable.",
+    "version": "0.12",
+    "author": "adamnemecek/overdrivenpotato",
+
+    "icons": {
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
+
+    "converted_from_user_script": "http://www.reddit.com/r/edmproduction/comments/1i4lgm/i_came_up_with_a_workaround_to_make_the_flair/",
+
+    "permissions": [
+        "tabs"
+    ],
+
+    "content_scripts": [
+        {
+            "matches": ["*://*.reddit.com/r/edmproduction*"],
+            "js": ["js/jquery.js", "js/flairs.js"],
+            "run_at": "document_end"
+        }
+    ]
+}
